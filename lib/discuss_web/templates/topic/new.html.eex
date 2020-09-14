@@ -1,6 +1,7 @@
 <%= form_for @changeset, Routes.topic_path(@conn, :create), fn f -> %>
-  <label>
+  <div class='row'>
     Name: <%= text_input f, :title, placeholder: "Title", class: "form-control" %>
-  </label>
+    <%= error_tag f, :title %>
+  </div>
   <%= submit "Submit" %>
 <% end %>
