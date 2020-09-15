@@ -3,5 +3,12 @@
 <ul class="collection">
   <%= for topic <- @topics do %>
     <li><%= topic.title %></li>
+    <li><%= link "Edit", to: Routes.topic_path(@conn, :edit, topic)%></li>
   <% end %>
 </ul>
+
+<div class='row'>
+  <%= link to: Routes.topic_path(@conn, :new), class: 'btn-floating' do %>
+    <i>Add</i>
+  <% end %>
+</div>
