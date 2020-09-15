@@ -4,6 +4,7 @@
   <%= for topic <- @topics do %>
     <li><%= topic.title %></li>
     <li><%= link "Edit", to: Routes.topic_path(@conn, :edit, topic)%></li>
+    <li><%= link "Delete", to: Routes.topic_path(@conn, :delete, topic), method: :delete %></li>
   <% end %>
 </ul>
 
